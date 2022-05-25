@@ -1,0 +1,388 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+.dashboard{
+    width: 100%;
+    background: linear-gradient(45deg,#c86dda 0%,#3224ae 100%);
+}
+.header {
+    display: block;
+    padding-top: 2px;
+    width: 100%;
+    max-width: 100%;
+    background-color: transparent;
+    overflow: hidden;
+    z-index: 10;
+
+}
+.navitems{
+    display: none;
+}
+
+#sidebarMenu {
+    height: 100%;
+    position: fixed;
+    right: 0;
+    width: 250px;
+    top: 0;
+    z-index: 90;
+    transform: translateX(250px);
+    transition: transform 250ms ease-in-out;
+    background: linear-gradient(45deg, #c86dda 0%, #3224ae 100%);}
+
+.sidebarMenuInner {
+    margin: 0;
+    padding: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+.sidebarMenuInner li {
+    list-style: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 20px;
+    cursor: pointer;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+.sidebarMenuInner li span {
+    display: block;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.50);
+}
+
+.sidebarMenuInner li a {
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+input[class=openSidebarMenu]:checked~#sidebarMenu {
+    transform: translateX(0);
+}
+
+input[class=openSidebarMenu] {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    display: none;
+}
+
+.sidebarIconToggle {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    cursor: pointer;
+    position: absolute;
+    z-index: 99;
+    height: 100%;
+    width: 100%;
+    top: 15px;
+    right: 15px;
+    height: 22px;
+    width: 22px;
+}
+
+.spinner {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    position: absolute;
+    height: 3px;
+    background-color: white;
+    border-radius: 4px;
+    z-index: 99;
+}
+
+
+.spinner.part-1 {
+    width: 80%;
+}
+
+.spinner.part-3 {
+    width: 60%;
+}
+
+.spinner.part-2 {
+    width:100%;
+}
+
+.horizontal {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    position: relative;
+    float: right;
+    margin-top: 3px;
+}
+
+
+.diagonal.part-1 {
+    position: relative;
+    transition: all 0.3s;
+    box-sizing: border-box;
+    float: right;
+}
+
+.diagonal.part-2 {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    position: relative;
+    float: right;
+    margin-top: 3px;
+}
+
+input[class="openSidebarMenu"]:checked~.sidebarIconToggle>.horizontal {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    opacity: 0;
+
+}
+
+input[class="openSidebarMenu"]:checked~.sidebarIconToggle>.diagonal.part-1 {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    transform: rotate(135deg);
+    margin-top: 8px;
+    width: 100%;
+}
+
+input[class="openSidebarMenu"]:checked~.sidebarIconToggle>.diagonal.part-2 {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    transform: rotate(-135deg);
+    margin-top: -9px;
+    width: 100%;
+}
+.header .brandName h2{
+    padding: 5px 5px 5px 15px;
+    color: white;
+}
+.search{
+    text-align: center;
+}
+.search input{
+    width: 90%;
+        padding: 15px 15px 15px 20px;
+        font-size: 15px;
+        color: rgb(140, 138, 138);
+        outline: none;
+        border: none;
+        margin: 20px 0 10px 0;
+
+}
+.carousel{
+    width: 90%;
+    padding: 15px;
+    
+}
+.carousel p{
+    font-size: 20px;
+    color: white;
+    margin: 20px 0;
+}
+.carousel h1{
+    font-size: 50px;
+    color: white;
+}
+.carousel button{
+    padding: 10px 30px 10px 30px;
+    font-size: 15px;
+    border-radius: 50px;
+    border: 1px solid #fec304;
+    margin: 20px 0;
+    outline: none;
+    color: white;
+    background-color: transparent;
+    
+}
+.ServicesItems{
+    display: flex;
+    margin-top: 5px;
+    padding: 15px 0;
+}
+.ServicesItems .img{
+    width: 20%;
+}
+.ServicesItems .img img{
+    width: 80px;
+    padding: 5px;
+}
+.ServicesItems .description{
+    width: 60%;
+}
+.services{
+    background-color: #fdf2ff;
+    padding: 30px 0 30px 0;
+}
+.carousel .product{
+    width: 100%;
+    
+}
+.carousel .product .product{
+    width:100%;
+    margin-top: -50px;
+}
+.carousel .product .previous{
+    width: 30px;
+}
+.carousel .product .next{
+    width: 30px;
+    position: absolute;
+    right: 15px;
+}
+.ServicesItems .description h2{
+padding-bottom: 5px;
+}
+.ServicesItems .description p{
+color: #989898;
+}
+
+.Category{
+    text-align: center;
+    padding: 10px 20px;
+    background-color: #ffffff;
+}
+.Category .CategoryHeader h3{
+    font-size: 12px;
+    padding: 20px;
+}
+.Category .CategoryHeader h2{
+font-size: 30px;
+padding:1px 10px 15px 10px;
+}
+.Category .CategoryHeader p{
+
+    color: #989898;
+}
+.Category .CategoryItem{
+    margin-top: 70px;
+}
+.Category .CategoryItem .item img{
+    width: 70%;
+}
+.Category .CategoryItem .item p{
+    color: #989898;
+    font-size: 18px;
+    padding: 4px;
+}
+.Category .CategoryItem .item p:hover{
+    color: black;
+}
+
+.overview {
+    background-color: #fdf2ff;
+}
+.overview h4{
+    text-align: center;
+    padding: 45px 0 10px 0;
+}
+.overview h1{
+    text-align: center;
+    padding: 20px;
+}
+.overview .item{
+    width: 90%;
+    background-color: white;
+    margin:30px auto;
+    padding:25px 25px 0 25px;
+    box-shadow: 4px 10px 30px #d086df52;
+
+}
+.overview .first{
+    position: relative;
+    height: 400px;
+}
+.overview .first h2{
+    font-size: 30px;
+}
+.overview .first p{
+    font-size: 20px;
+    color: #aaaaaa;
+}
+.overview .first button{
+    background-color: transparent;
+    border: 2px solid #c86dda;
+    padding: 10px 30px;
+    margin: 30px 0 0 0;
+    font-size: 18px;
+    border-radius: 50px;
+
+}
+.overview .first .firstImg{
+    width: 100%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+.overview .three .first .first{
+    height: 250px;
+    position: relative;
+}
+
+.overview .three .first .first p{
+    font-size: 18px;
+    font-weight: 700;
+        padding: 5px 0;
+}
+.overview .three .first .first h2{
+width: 60%;
+font-size: 30px;
+}
+.overview .three .first .first img{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+.overview .three .first{
+    position: relative;
+    height: auto;
+}
+.overview .three .first .second{
+    position: relative;
+    height: 200px;
+}
+.overview .three .first .second h2{
+    font-size: 30px;
+    width: 10%;
+
+}
+.overview .three .first .second p{
+    font-size: 18px;
+    font-weight: 700;
+    padding: 5px 0;
+
+}
+.overview .three .first .second img{
+    width: 100%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+.overview .three .second1{
+    position: relative;
+height: 400px;
+}
+.overview .three .second1 h2{
+font-size: 30px;
+}
+.overview .three .second1 p{
+    font-size: 18px;
+    color: #aaaaaa;
+
+}
+.overview .three .second1 button{
+        background-color: transparent;
+            border: 2px solid #c86dda;
+            padding: 10px 30px;
+            margin: 30px 0 0 0;
+            font-size: 18px;
+            border-radius: 50px;
+}
+.overview .three .second1 img{
+    width: 500px;
+    position: absolute;
+    bottom: 35px;
+    right: 0;
+}
