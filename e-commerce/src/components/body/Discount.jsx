@@ -42,7 +42,7 @@ const Discount = () => {
             <p>Solid:120</p>
             <p>Quantity:500</p>
           </div>
-          <input type="range"  min="0" max="500" />
+          <input type="range" min="0" max="500" />
 
           <button>Add to cart</button>
 
