@@ -301,6 +301,7 @@ input[class="openSidebarMenu"]:checked~.sidebarIconToggle>.diagonal.part-2 {
 
 .overview {
     background-color: #fdf2ff;
+    padding-bottom: 100px;
 }
 
 .overview h4 {
@@ -435,4 +436,383 @@ input[class="openSidebarMenu"]:checked~.sidebarIconToggle>.diagonal.part-2 {
     position: absolute;
     bottom: 35px;
     right: 0;
+}
+
+.productTypes {
+    background-color: white;
+
+    padding: 50px 10px 20px 20px;
+    margin-bottom: 20px;
+}
+
+.productTypes .ProductHeaderContainer .productContainerTitle {
+    width: 100%;
+
+}
+
+.productTypes .ProductHeaderContainer .productContainerTitle h1 {
+    font-size: 40px;
+}
+
+.productTypes .ProductHeaderContainer .ProductCategory ul {
+    display: flex;
+    overflow: scroll;
+    overflow-y: hidden;
+    padding: 15px;
+    margin-left: 0;
+
+}
+
+.productTypes .ProductHeaderContainer .ProductCategory ul::-webkit-scrollbar {
+    display: none;
+}
+
+.productTypes .ProductHeaderContainer .ProductCategory ul li {
+    list-style-type: none;
+}
+
+.productTypes .ProductHeaderContainer .ProductCategory ul li a {
+    text-decoration: none;
+    padding: 10px;
+    color: #989898;
+    font-size: 16px;
+}
+
+.ProductContainer {
+    display: flex;
+    width: auto;
+    overflow: scroll;
+    gap: 20px;
+    padding: 20px 0 50px 10px;
+}
+
+.ProductComponentContainer {
+    width: auto;
+    height: 350px;
+    background-color: white;
+    padding: 15px;
+    position: relative;
+    box-shadow: 0px 10px 20px #cbcbcbf7;
+}
+
+.ProductContainer::-webkit-scrollbar {
+    display: none;
+}
+
+.ProductComponentContainer .containerImg {
+    width: 200px;
+    text-align: center;
+
+}
+
+.ProductComponentContainer .containerImg img {
+    width: 150px;
+    padding-top: 15px;
+}
+
+.ProductComponentContainer h2 {
+    font-size: 23px;
+    padding: 2px 0 2px 10px;
+}
+
+.ProductContainer .ProductComponentContainer p {
+    font-weight: 700;
+    padding: 10px 0 2px 10px;
+}
+
+.ProductComponentContainer .cart {
+    width: 30px;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    z-index: 70;
+}
+
+
+.Discount {
+    width: 100%;
+    background-color: #fdf2ff;
+}
+
+.DiscountHeader {
+    width: 100%;
+}
+
+.DiscountHeader .DiscountHeaderTitle h2 {
+    font-size: 30px;
+    text-align: center;
+    padding: 10px;
+}
+
+.DiscountHeader .DiscountHeaderTimer h2 {
+    font-size: 20px;
+    text-align: center;
+    padding: 10px;
+}
+
+.DiscountBody .ProductCategory {
+    width: 100%;
+}
+
+.DiscountBody .ProductCategory .Container {
+    text-align: center;
+    width: 80%;
+    margin: 20px auto;
+    box-shadow: 2px 10px 30px #d1cfcfbe;
+    padding: 40px;
+}
+
+.DiscountBody .ProductCategory .Container h2 {
+    padding: 10px;
+    font-size: 25px;
+}
+
+.DiscountBody .ProductCategory .Container p {
+    padding: 10px;
+    font-size: 18px;
+    color: #989898;
+}
+
+.DiscountBody .ProductImg {
+    width: 100%;
+    margin: 40px 0 20px 0;
+    text-align: center;
+}
+
+.DiscountBody .ProductImg img {
+    width: 70%;
+    margin: auto;
+    padding: 30px 0 20px 0;
+}
+
+.DiscountBody .ProductDescription {
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+}
+
+.DiscountBody .ProductDescription h3 {
+    font-size: 25px;
+    text-align: center;
+}
+
+.DiscountBody .ProductDescription .price {
+    font-size: 15px;
+    font-weight: 700;
+    padding: 20px 0 0 0;
+    color: #9000ad;
+}
+
+/* .DiscountBody .ProductDescription .price span {}
+ */
+
+.DiscountBody .ProductDescription .description {
+    font-size: 15px;
+    color: #989898;
+    line-height: 25px;
+    padding: 20px 0 30px 0;
+    word-spacing: 3px;
+}
+
+.DiscountBody .ProductDescription div {
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 10px;
+}
+
+.DiscountBody .ProductDescription input {
+    width: 100%;
+    height: 40px;
+}
+
+.DiscountBody .ProductDescription button {
+    border: none;
+    background-color: #9000ad;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-size: 15px;
+}
+
+.More {
+    background-color: #fdf2ff;
+    width: 100%;
+    height: auto;
+    padding-bottom: 40px;
+}
+
+.More h4 {
+    padding: 20px 0 0 30px;
+}
+
+.More h1 {
+    padding: 10px 0 20px 30px;
+    font-size: 40px;
+}
+
+.MoreCard {
+    width: 100%;
+    padding: 10px 5px 60px 5px;
+}
+
+.MoreCard .Card {
+    width: 90%;
+    height: 400px;
+    margin: 50px auto;
+
+    box-shadow: 2px 15px 30px #d1cfcfd3;
+}
+
+.MoreCard .Card img {
+    width: 100%;
+
+}
+
+.MoreCard .Card h3 {
+
+    padding: 10px 30px 10px 30px;
+    font-size: 25px;
+}
+
+.MoreCard .Card p {
+    padding: 10px 0 10px 30px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.Newsletter {
+    padding: 60px 10px;
+    background-color: #3224ae;
+    position: relative;
+    margin: 10px 0 0 0;
+
+}
+
+.Newsletter .about {
+    width: 90%;
+    padding: 20px 0 20px 30px;
+    z-index: 90;
+}
+
+.Newsletter .about h1 {
+    font-size: 35px;
+    font-weight: 700;
+    color: white;
+}
+
+.Newsletter .about p {
+    padding: 20px 0 10px 0;
+}
+
+.Newsletter .about p#n1 {
+    font-size: 18px;
+    color: rgb(250, 244, 232);
+}
+
+.Newsletter .about p#n2 {
+    font-size: 15px;
+    line-height: 25px;
+    word-spacing: 5px;
+    color: #bdbdbd;
+}
+
+.Newsletter .Subscribe {
+    width: 80%;
+    margin: auto;
+}
+
+.Newsletter .Subscribe input {
+    height: 50px;
+    outline: none;
+    font-size: 18px;
+    padding: 0 0 0 10px;
+    width: 100%;
+    color: rgb(51, 50, 50);
+    display: block;
+    z-index: 90;
+}
+
+.Newsletter .Subscribe button {
+    border: none;
+    padding: 10px 30px;
+    font-size: 18px;
+    background-color: #fec304;
+    margin: 10px 0 0 0;
+    color: white;
+    border-radius: 5px;
+}
+
+.Newsletter .circle {
+    height: 100px;
+    width: 100px;
+    background: linear-gradient(45deg, #c86dda 0%, #3224ae 100%);
+    position: absolute;
+    border-radius: 50px;
+}
+
+.Newsletter .circle.n1 {
+    top: -30px;
+    right: 20%;
+}
+
+.Newsletter .circle.n2 {
+    bottom: 0;
+    left: 0;
+    border-radius: 0 100px 0 0;
+    height: 50px;
+    width: 50px;
+}
+
+.Newsletter .circle.n3 {
+    bottom: 0;
+    border-radius: 100px 100px 0 0;
+    right: 30px;
+    height: 50px;
+    width: 100px;
+}
+
+footer {
+    background-color: #fdf2ff;
+    height: auto;
+    width: 100%;
+}
+
+.footer {
+    background-color: #fdf2ff;
+    color: #8d8d8d;
+
+}
+
+.footer hr {
+    width: 80%;
+    height: 2px;
+    color: #8d8d8d;
+    margin:20px auto;
+    
+}
+
+.resource {
+    width: 80%;
+    text-align: center;
+    margin: auto;
+    padding: 20px;
+
+}
+
+.resource h3 {
+    padding: 5px;
+    font-size: 23px;
+    font-weight: 800;
+}
+
+.resource p {
+    font-size: 20px;
+    padding: 5px;
+}
+.socials{
+    text-align: center;
+    margin: 30px 0 ;
+    
 }
