@@ -489,7 +489,7 @@ input[class="openSidebarMenu"]:checked~.sidebarIconToggle>.diagonal.part-2 {
 
 .ProductComponentContainer {
     width: auto;
-    height: auto;
+    height: 350px;
     background-color: white;
     padding: 15px;
     position: relative;
@@ -661,7 +661,7 @@ input[class="openSidebarMenu"]:checked~.sidebarIconToggle>.diagonal.part-2 {
 
 .MoreCard .Card {
     width: 90%;
-    height: 400px;
+    height: auto;
     margin: 50px auto;
 
     box-shadow: 2px 15px 30px #d1cfcfd3;
@@ -679,7 +679,7 @@ input[class="openSidebarMenu"]:checked~.sidebarIconToggle>.diagonal.part-2 {
 }
 
 .MoreCard .Card p {
-    padding: 10px 0 10px 30px;
+    padding: 10px 0 40px 30px;
     font-size: 18px;
     font-weight: 600;
 }
