@@ -489,7 +489,7 @@ input[class="openSidebarMenu"]:checked~.sidebarIconToggle>.diagonal.part-2 {
 
 .ProductComponentContainer {
     width: auto;
-    height: 350px;
+    height: auto;
     background-color: white;
     padding: 15px;
     position: relative;
@@ -553,6 +553,7 @@ input[class="openSidebarMenu"]:checked~.sidebarIconToggle>.diagonal.part-2 {
 
 .DiscountBody .ProductCategory {
     width: 100%;
+    background-color: white;
 }
 
 .DiscountBody .ProductCategory .Container {
@@ -590,7 +591,6 @@ input[class="openSidebarMenu"]:checked~.sidebarIconToggle>.diagonal.part-2 {
     width: 100%;
     padding: 20px;
     text-align: center;
-    background-color: white;
 }
 
 .DiscountBody .ProductDescription h3 {
