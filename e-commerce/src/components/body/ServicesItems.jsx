@@ -3,7 +3,7 @@ import bag from "../../Images/Ecommerce-stock-image/bag.png"
 
 const ServicesItems = ({ ImgUrl, title, description }) => {
     return (
-        <div>
+        <div className='ServicesItemsParentContainer'>
 
             <div className='ServicesItems'>
 

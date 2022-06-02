@@ -3,7 +3,7 @@ import img from "../../Images/Ecommerce-stock-image/kisspng-laptop-ideapad-lenov
 
 const CategoryItem = () => {
   return (
-      <div>
+      <div className='ItemParentClass'>
 
           <div className='item'>
               <img src={img} alt='pic' />

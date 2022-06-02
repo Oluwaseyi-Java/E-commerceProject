@@ -260,13 +260,14 @@ input[class="openSidebarMenu"]:checked~.sidebarIconToggle>.diagonal.part-2 {
     background-color: #fdf2ff;
     padding: 30px 0 30px 0;
     display: flex;
+    width: 100%;
     flex-direction: column;
 }
 
 .ServicesItems {
-    display: flex;
     margin-top: 5px;
     padding: 15px 0;
+    display: flex;
 }
 
 .ServicesItems .img {
@@ -515,7 +516,7 @@ input[class="openSidebarMenu"]:checked~.sidebarIconToggle>.diagonal.part-2 {
 .productTypes .ProductHeaderContainer .ProductCategory ul {
     display: flex;
     overflow: scroll;
-    overflow-y: hidden;
+
     padding: 15px;
     margin-left: 0;
 
@@ -899,24 +900,77 @@ footer {
     padding: 10px 0 40px 0;
 }
 
-@media (min-width:400px) {
-   
-    .services{
+@media (min-width:510px) {
+
+    .services {
         padding: 0 10%;
     }
-    .Category{
+
+    .Category {
         padding: 0 10%;
     }
-    .overview{
+
+    .overview {
         padding: 0 10%;
     }
-    .Discount{
+
+    .Discount {
         padding: 0 10%;
     }
-    .More{
+
+    .More {
         padding: 0 10%;
     }
-    .resources{
+
+    .resources {
         padding: 0 10%;
     }
+}
+
+@media (min-width:600px) {
+    .services {
+        width: 100%;
+        padding: 0;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .ServicesItemsParentContainer {
+        width: 40%;
+        padding: 0;
+    }
+
+    .ServicesItems .img {
+        width: 30%;
+    }
+
+    .ServicesItems .img img {
+        width: 80%;
+        padding: 5px;
+    }
+
+    .ServicesItems .description {
+        width: 50%;
+    }
+
+  .Category  .CategoryItem{
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: space-evenly;
+    }
+.ItemParentClass{
+    width: 40%;
+}
+.Category .CategoryItem .item img {
+    width: 100%;
+}
+.Category .CategoryItem .item p {
+    color: #989898;
+    font-size: 15px;
+    padding: 4px;
+
+}
+
 }

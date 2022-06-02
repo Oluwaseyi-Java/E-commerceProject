@@ -14,6 +14,9 @@ const Categories = () => {
             <div className='CategoryItem'>
 
                 <CategoryItem/>
+                <CategoryItem/>               
+
+                <CategoryItem/>
                 <CategoryItem/>
                
                 
