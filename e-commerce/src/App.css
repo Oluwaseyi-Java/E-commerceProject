@@ -706,8 +706,6 @@ input[class="openSidebarMenu"]:checked~.sidebarIconToggle>.diagonal.part-2 {
     width: 100%;
     height: auto;
     padding-bottom: 40px;
-    display: flex;
-    flex-direction: column;
 }
 
 .More h4 {
@@ -721,7 +719,8 @@ input[class="openSidebarMenu"]:checked~.sidebarIconToggle>.diagonal.part-2 {
 
 .MoreCard {
     width: 100%;
-    padding: 10px 5px 60px 5px;
+    display: flex;
+    flex-direction: column;
 }
 
 .MoreCard .Card {
@@ -954,23 +953,47 @@ footer {
         width: 50%;
     }
 
-  .Category  .CategoryItem{
+    .Category .CategoryItem {
         flex-direction: row;
         flex-wrap: wrap;
         width: 100%;
         justify-content: space-evenly;
     }
-.ItemParentClass{
-    width: 40%;
-}
-.Category .CategoryItem .item img {
-    width: 100%;
-}
-.Category .CategoryItem .item p {
-    color: #989898;
-    font-size: 15px;
-    padding: 4px;
 
+    .ItemParentClass {
+        width: 40%;
+    }
+
+    .Category .CategoryItem .item img {
+        width: 100%;
+    }
+
+    .Category .CategoryItem .item p {
+        color: #989898;
+        font-size: 15px;
+        padding: 4px;
+
+    }
+
+    .overview .item {
+        width: 70%;
+    }
 }
 
+@media (min-width:690px) {
+    .MoreCard {
+        padding: 0;
+        flex-direction: row;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+
+    .MoreCard .Card {
+        width: 40%;
+    }
+}
+@media (min-width:750px){
+    .header{
+        
+    }
 }
