@@ -1,58 +1,68 @@
-import React, { useState } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import NavIcon from './NavIcon'
 
 const Header = () => {
 
-    const [searchInput,setSearchInput]=useState("Search")
-
-//     let navbar ;
-//     let sticky = navbar.offsetTop;
+    const [searchInput, setSearchInput] = useState("Search")
 
 
-//     function myNav() {
-//         if (window.pageYOffset >= sticky) {
-//             navbar="sticky"
-//         } else {
-//             navbar=""
-//         }
-//    }
-//     window.onscroll = function () {
-//         myNav()
-//     }
-//     id = {`${navbar}`
-// }
+
+    const [sticky, setSticky] = useState({ isSticky: false, offset: 0 });
+    const headerRef = useRef(null);
+
+    const handleScroll = (elTopOffset, elHeight) => {
+        if (window.pageYOffset > (elTopOffset + elHeight)) {
+            setSticky({ isSticky: true, offset: elHeight });
+        } else {
+            setSticky({ isSticky: false, offset: 0 });
+        }
+    };
+
+    useEffect(() => {
+        var header = headerRef.current.getBoundingClientRect();
+        const handleScrollEvent = () => {
+            handleScroll(header.top, header.height)
+        }
+
+        window.addEventListener('scroll', handleScrollEvent);
+
+        return () => {
+            window.removeEventListener('scroll', handleScrollEvent);
+        };
+    }, []);
 
     return (
-      <div>
-      
-      <div className='header'>
-      
-          <div className='brandName'>
-          
-          <h2>RELAP</h2>
-          </div>
+        <div>
 
-          <div className='navitems'>
-              Nav items
-          </div>
-          <div className='headerIcons'>
-              
-          </div>
-          <div className='search'>
-              <input
-                  type="text"
-                  value={searchInput}
-                  name="searchInput"
-                  onChange={(e)=> setSearchInput(e.target.value)}
-              />
-          </div>
-          
-      
+            <div className={`header ${sticky.isSticky ? ' sticky' : ''}`} ref={headerRef} id="sticky-header">
+
+                <div className='brandName'>
+
+                    <h2>RELAP</h2>
+                </div>
+
+                <div className='navitems'>
+                    Nav items
+                </div>
+                <div className='headerIcons'>
+
+                </div>
+
+                <div className='search'>
+                    <input
+                        type="text"
+                        value={searchInput}
+                        name="searchInput"
+                        onChange={(e) => setSearchInput(e.target.value)}
+                    />
+                </div>
+
+
+                <NavIcon />
             </div>
-            
-            <NavIcon/>
-      </div>
-  )
+
+        </div>
+    )
 }
 
 export default Header
