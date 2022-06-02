@@ -319,7 +319,8 @@ input[class="openSidebarMenu"]:checked~.sidebarIconToggle>.diagonal.part-2 {
 }
 
 .Category .CategoryItem .item {
-    margin-top: 70px;
+    margin-top: 50px;
+    padding-bottom: 30px;
 }
 
 .Category .CategoryItem .item img {
@@ -757,8 +758,9 @@ input[class="openSidebarMenu"]:checked~.sidebarIconToggle>.diagonal.part-2 {
 
 .Newsletter .about {
     width: 90%;
-    padding: 20px 0 20px 30px;
+    padding: 20px 0 20px 0px;
     z-index: 90;
+    margin: auto;
 }
 
 .Newsletter .about h1 {
@@ -784,7 +786,7 @@ input[class="openSidebarMenu"]:checked~.sidebarIconToggle>.diagonal.part-2 {
 }
 
 .Newsletter .Subscribe {
-    width: 80%;
+    width: 90%;
     margin: auto;
 }
 
@@ -792,11 +794,9 @@ input[class="openSidebarMenu"]:checked~.sidebarIconToggle>.diagonal.part-2 {
     height: 50px;
     outline: none;
     font-size: 18px;
-    padding: 0 0 0 10px;
     width: 100%;
     color: rgb(51, 50, 50);
     display: block;
-    z-index: 90;
 }
 
 .Newsletter .Subscribe button {
@@ -897,4 +897,26 @@ footer {
     text-align: center;
     margin: 30px 0 0 0;
     padding: 10px 0 40px 0;
+}
+
+@media (min-width:400px) {
+   
+    .services{
+        padding: 0 10%;
+    }
+    .Category{
+        padding: 0 10%;
+    }
+    .overview{
+        padding: 0 10%;
+    }
+    .Discount{
+        padding: 0 10%;
+    }
+    .More{
+        padding: 0 10%;
+    }
+    .resources{
+        padding: 0 10%;
+    }
 }
