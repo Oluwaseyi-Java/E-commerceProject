@@ -7,9 +7,11 @@ import Overview from './Overview'
 import ProductTypes from './ProductTypes'
 import Services from './Services'
 
+
 const Body = () => {
   return (
     <div>
+
 
       <Services />
       <Categories />

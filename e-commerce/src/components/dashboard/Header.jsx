@@ -5,6 +5,22 @@ const Header = () => {
 
     const [searchInput,setSearchInput]=useState("Search")
 
+//     let navbar ;
+//     let sticky = navbar.offsetTop;
+
+
+//     function myNav() {
+//         if (window.pageYOffset >= sticky) {
+//             navbar="sticky"
+//         } else {
+//             navbar=""
+//         }
+//    }
+//     window.onscroll = function () {
+//         myNav()
+//     }
+//     id = {`${navbar}`
+// }
 
     return (
       <div>

@@ -11,6 +11,9 @@ const Overview = () => {
 
             <h4>DESRANT</h4>
             <h1>Mollit anim</h1>
+            <div className='item-con'>
+            
+            
             <div className='first item'>
                 <h2>Sed ut perspiciatis</h2>
                 <p>Unde onmis iste natus error</p>
@@ -37,6 +40,7 @@ const Overview = () => {
                     <button>Shop now</button>
                     <img className='img' src={desktop} alt='pic' />
                 </div>
+            </div>
             </div>
 
 

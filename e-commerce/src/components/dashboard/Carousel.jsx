@@ -8,9 +8,12 @@ import next from "../../Images/Ecommerce-stock-image/carousel_next.png"
 const Carousel = () => {
   return (
     <div className='carousel'>
-      <p>MINIM VENIAM</p>
-      <h1>Ut labore et dolore</h1>
-      <button>Buy now</button>
+      <div>
+        <p>MINIM VENIAM</p>
+        <h1>Ut labore et dolore</h1>
+        <button>Buy now</button>
+      </div>
+
       <div className='product'>
         <img className='product' src={img} alt='pic' />
         <img className='previous' src={prev} alt='pic' />
