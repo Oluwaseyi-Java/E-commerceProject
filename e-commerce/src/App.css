@@ -584,7 +584,6 @@ input[class="openSidebarMenu"]:checked~.sidebarIconToggle>.diagonal.part-2 {
     position: absolute;
     right: 10px;
     bottom: 10px;
-    z-index: 70;
 }
 
 
@@ -690,6 +689,7 @@ input[class="openSidebarMenu"]:checked~.sidebarIconToggle>.diagonal.part-2 {
 .DiscountBody .ProductDescription input {
     width: 100%;
     height: 40px;
+    
 }
 
 .DiscountBody .ProductDescription button {
@@ -702,7 +702,7 @@ input[class="openSidebarMenu"]:checked~.sidebarIconToggle>.diagonal.part-2 {
 }
 
 .More {
-    background-color: #fdf2ff;
+    background-color: #fff;
     width: 100%;
     height: auto;
     padding-bottom: 40px;
@@ -1183,13 +1183,53 @@ footer {
 
     .overview .item-con {
         width: 80%;
-        margin: auto;display: flex;
-            flex-direction: row;
-            justify-content: space-between;
+        margin: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
     }
 
     .overview .item {
         margin: 0;
+    }
+
+    .overview .item-con h2 {
+        font-size: 20px;
+        font-weight: 800;
+    }
+
+    .overview .item-con p {
+        font-size: 15px;
+
+    }
+
+    .overview .item-con .first.item p {
+        font-size: 15px;
+    }
+
+    .overview .item-con .three p {
+        font-size: 15px;
+    }
+
+    .overview .item-con .first.item button {
+        padding: 8px 25px;
+        font-size: 15px;
+    }
+
+    .overview .item-con .three.object .first h2 {
+        font-size: 20px;
+        font-weight: 800;
+    }
+
+    .overview .item-con .three.object .second1 h2 {
+        font-size: 20px;
+        font-weight: 800;
+    }
+
+    .overview .item-con .three.object .second1 button {
+        padding: 8px 25px;
+        font-size: 15px;
+
     }
 
     .overview .item-con .first.item {
@@ -1201,8 +1241,9 @@ footer {
         width: 65%;
     }
 
-    .overview .item-con .three.object .first h2 {
-        font-size: 15px;
+
+    .overview .item-con .three.object .first .first {
+        display: block;
     }
 
     .overview .item-con .three.object .first {
@@ -1223,12 +1264,8 @@ footer {
         height: 200px;
     }
 
-    .overview .item-con .three.object .first .second.item img {
-        /* width: 50%; */
-    }
-
-    .overview .item-con .three.object .first .first.item img {
-        /* width: 30%; */
+    .overview .item-con .three.object .first .second.item p {
+        font-size: 15px;
     }
 
     .overview .item-con .three .second1.item {
@@ -1240,5 +1277,128 @@ footer {
     .overview .item-con .three .second1.item img {
         width: 80%;
     }
+
+    .productTypes {
+        padding: 40px 10%;
+    }
+
+    .productTypes .ProductHeaderContainer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .ProductContainer {
+        gap: 40px;
+        padding: 40px 20px;
+    }
+
+    .ProductComponentContainer {
+        box-shadow: 0px 10px 30px #cbcbcb91;
+    }
+
+    .ProductComponentContainer .containerImg {
+        width: 200px;
+    }
+
+    .ProductComponentContainer h2 {
+        font-size: 20px;
+    }
+
+    .ProductContainer .ProductComponentContainer p {
+        font-size: 15px;
+    }
+
+    .ProductComponentContainer .cart {
+        width: 25px;
+    }
+
+    .Discount {
+        padding: 50px 10%;
+    }
+
+    .Discount .DiscountHeader {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+
+    .Discount .DiscountHeader .DiscountHeaderTitle h2 {
+        font-weight: 900;
+        font-size: 45px;
+    }
+
+    .Discount .DiscountHeader .DiscountHeaderTimer h2 {
+        font-size: 30px;
+        font-weight: 800;
+    }
+
+    .Discount .DiscountBody {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+
+    .DiscountBody .ProductCategory {
+        width: 40%;
+    }
+
+    .DiscountBody .ProductCategory .Container h2 {
+
+        padding: 10px 0;
+    }
+
+    .DiscountBody .ProductCategory .Container p {
+        padding: 10px 0;
+    }
+
+    .DiscountBody .ProductCategory .Container {
+        text-align: left;
+        width: 100%;
+    }
+
+    .DiscountBody .ProductImg {
+        width: 100%;
+    }
+
+    .DiscountBody .ProductImg img {
+        padding-top: 0;
+        width: 60%;
+    }
+
+    .DiscountBody .ProductDescription {
+        width: 60%;
+        padding: 20px;
+        text-align: left;
+    }
+
+    .DiscountBody .ProductDescription h3 {
+        text-align: left;
+        font-weight: 800;
+    }
+
+.More{
+    padding: 50px 10%;
+}
+.More h4{
+    font-weight: 600;
+    padding-left: 0;
+}
+.More h1{
+    padding-left: 0;
+    font-size: 45px;
+    font-weight: 800;
+}
+.MoreCard{
+    flex-wrap: nowrap;
+    gap: 50px;
+    flex-direction: row;
+}
+.MoreCard .Card h3{
+    font-size: 20px;
+}
+.MoreCard .Card p{
+font-size: 15px;
+}
 
 }

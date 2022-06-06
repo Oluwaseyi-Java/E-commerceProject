@@ -8,7 +8,7 @@ const Discount = () => {
 
       <div className='DiscountHeader'>
         <div className='DiscountHeaderTitle'><h2>Magni dolores</h2></div>
-        <div className='DiscountHeaderTimer'><h2>21:56:14:42</h2></div>
+        <div className='DiscountHeaderTimer'><h2>21 : 56 : 14 : 42</h2></div>
       </div>
 
       <div className='DiscountBody'>
@@ -31,10 +31,7 @@ const Discount = () => {
 
           <p className='description'>
             Since version 4, Animate.css uses custom properties
-            (also known as CSS variables) to define the animation's duration,
-            delay, and iterations. This makes Animate.css very flexible and customizable.
-            Need to change an animation duration? Just set a new value globally or locally.
-            to define the animation's duration,
+            (also known as CSS variables) to define the animation's duration,izable.
             delay, and iterations. This makes Animate.css very flexible and customizable
           </p>
 

@@ -34,6 +34,14 @@ const Products = () => {
                 <p>$180</p>
                 <img  className='cart' src={cartImg} alt="pic" />
             </div>
+            <div className='ProductComponentContainer'>
+                <div className='containerImg'>
+                    <img src={HeadsetImg} alt="pic" />
+                </div>
+                <h2>Nemo enim ipsam</h2>
+                <p>$180</p>
+                <img  className='cart' src={cartImg} alt="pic" />
+            </div>
 
 
         </div>
