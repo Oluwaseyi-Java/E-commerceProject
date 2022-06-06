@@ -8,8 +8,7 @@ const Newsletter = () => {
                 <p id='n1'>ODIO DISNISSIMOS</p>
                 <h1>Ducimus qui</h1>
                 <p id='n2'>Note that the development build is not optimized.
-                    To create a production build, use npm run build. Note that the development build is not optimized.
-                    To create a production build, use npm run build.</p>
+                    To create a production build, use npm run build.    use npm run build.</p>
             </div>
             <div className='Subscribe'>
                 <input type="email" placeholder='Enter your Email...' />

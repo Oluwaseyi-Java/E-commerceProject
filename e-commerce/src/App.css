@@ -689,7 +689,7 @@ input[class="openSidebarMenu"]:checked~.sidebarIconToggle>.diagonal.part-2 {
 .DiscountBody .ProductDescription input {
     width: 100%;
     height: 40px;
-    
+
 }
 
 .DiscountBody .ProductDescription button {
@@ -758,8 +758,7 @@ input[class="openSidebarMenu"]:checked~.sidebarIconToggle>.diagonal.part-2 {
 
 .Newsletter .about {
     width: 90%;
-    padding: 20px 0 20px 0px;
-    z-index: 90;
+    padding: 20px 0 20px 0;
     margin: auto;
 }
 
@@ -875,15 +874,14 @@ footer {
 .resource h3 {
 
     padding: 5px 0 5px 0;
-    font-size: 23px;
+    font-size: 18px;
     font-weight: 800;
     color: #515151;
 }
 
 .resource p {
-    font-size: 20px;
     padding: 5px 0 5px 0;
-    font-size: 20px;
+    font-size: 15px;
 
 
 }
@@ -891,6 +889,11 @@ footer {
 .resource p a {
     text-decoration: none;
     color: #989898;
+}
+
+.resource p a:hover {
+    font-size: 14px;
+    color: #9000ad;
 }
 
 .socials {
@@ -993,19 +996,29 @@ footer {
     }
 }
 
-@media (min-width:747px) {
+
+
+
+
+@media (min-width:750px) {
+
     .search input {
         display: none;
     }
-}
 
-@media (min-width:950px) {
-    .search input {
-        display: block;
+    .sticky .search {
+        display: none;
     }
-}
 
-@media (min-width:750px) {
+    .Newsletter .Subscribe {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+
+
+
     .header {
         padding: 20px 5%;
         margin: 0;
@@ -1147,8 +1160,16 @@ footer {
         width: 100%;
     }
 
+    .ServicesItems .img img {
+        width: 60px;
+    }
+
     .ServicesItems .description h2 {
-        font-size: 20px;
+        font-size: 17px;
+    }
+
+    .ServicesItems .description p {
+        font-size: 12px;
     }
 
 
@@ -1321,11 +1342,13 @@ footer {
         display: flex;
         justify-content: space-between;
         flex-direction: row;
+        align-items: center;
     }
 
     .Discount .DiscountHeader .DiscountHeaderTitle h2 {
         font-weight: 900;
         font-size: 45px;
+
     }
 
     .Discount .DiscountHeader .DiscountHeaderTimer h2 {
@@ -1377,28 +1400,134 @@ footer {
         font-weight: 800;
     }
 
-.More{
-    padding: 50px 10%;
-}
-.More h4{
-    font-weight: 600;
-    padding-left: 0;
-}
-.More h1{
-    padding-left: 0;
-    font-size: 45px;
-    font-weight: 800;
-}
-.MoreCard{
-    flex-wrap: nowrap;
-    gap: 50px;
-    flex-direction: row;
-}
-.MoreCard .Card h3{
-    font-size: 20px;
-}
-.MoreCard .Card p{
-font-size: 15px;
+    .More {
+        padding: 50px 10%;
+    }
+
+    .More h4 {
+        font-weight: 600;
+        padding-left: 0;
+    }
+
+    .More h1 {
+        padding-left: 0;
+        font-size: 45px;
+        font-weight: 800;
+    }
+
+    .MoreCard {
+        flex-wrap: nowrap;
+        gap: 50px;
+        flex-direction: row;
+    }
+
+    .MoreCard .Card h3 {
+        font-size: 20px;
+    }
+
+    .MoreCard .Card p {
+        font-size: 15px;
+    }
+
+    .Newsletter {
+        padding: 50px 10%;
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .Newsletter .about h1 {
+        font-size: 50px;
+    }
+
+    .Newsletter .about p#n1 {
+        font-size: 15px;
+    }
+
+    .Newsletter .about p#n2 {
+        font-size: 13px;
+    }
+
+    .Newsletter .about {
+        width: 40%;
+    }
+
+    .Newsletter .Subscribe {
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .Newsletter .Subscribe input {
+        height: 40px;
+        width: 70%;
+        font-size: 12px;
+        padding: 5px 15px;
+    }
+
+    .Newsletter .Subscribe button {
+
+        padding: 10px 15px;
+        width: 90px;
+        font-size: 15px;
+    }
+
+    .Newsletter .circle.n3 {
+        right: 200px;
+    }
+
+    .resources {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        padding: 20px 10%;
+        width: 100%;
+    }
+
+    .resource {
+        width: 20%;
+    }
+
+    .resource h3 {
+        font-size: 15px;
+    }
+
+    .resource p {
+        font-size: 12px;
+    }
+
+    .socials {
+        font-size: 15px;
+    }
 }
 
+@media (min-width:1020px) {
+
+
+    .search input {
+        display: block;
+    }
+
+    .sticky .search {
+        display: block;
+    }
+
+
+    .ServicesItems .img img {
+        width: 80px;
+        margin-top: -15px;
+    }
+
+    .Newsletter .Subscribe {
+        flex-direction: row;
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+    }
+
+    .Newsletter .Subscribe button {
+        width: 25%;
+        font-size: 13px;
+    }
 }
