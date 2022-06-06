@@ -20,6 +20,7 @@ const Body = () => {
       <Discount />
       <More />
       <Newsletter />
+
     </div>
   )
 }

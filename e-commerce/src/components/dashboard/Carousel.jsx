@@ -8,7 +8,7 @@ import next from "../../Images/Ecommerce-stock-image/carousel_next.png"
 const Carousel = () => {
   return (
     <div className='carousel'>
-      <div>
+      <div className='about'>
         <p>MINIM VENIAM</p>
         <h1>Ut labore et dolore</h1>
         <button>Buy now</button>

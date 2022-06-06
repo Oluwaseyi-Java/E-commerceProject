@@ -491,7 +491,7 @@ input[class="openSidebarMenu"]:checked~.sidebarIconToggle>.diagonal.part-2 {
 }
 
 .overview .three .second1 img {
-    width: 500px;
+    width: 90%;
     position: absolute;
     bottom: 35px;
     right: 0;
@@ -992,8 +992,253 @@ footer {
         width: 40%;
     }
 }
-@media (min-width:750px){
-    .header{
-        
+
+@media (min-width:747px) {
+    .search input {
+        display: none;
     }
+}
+
+@media (min-width:950px) {
+    .search input {
+        display: block;
+    }
+}
+
+@media (min-width:750px) {
+    .header {
+        padding: 20px 5%;
+        margin: 0;
+        width: 100%;
+        justify-content: space-between;
+        display: flex;
+        border-bottom: 1pt solid rgba(255, 255, 255, 0.208);
+    }
+
+
+
+    .header .brandName h2 {
+        padding: 0 15px 0 0;
+    }
+
+    .header .search {
+        text-align: left;
+        flex-grow: 2;
+    }
+
+    .header .search input {
+        width: 100%;
+        margin: auto;
+        padding: 10px;
+    }
+
+
+
+    #sidebarMenu {
+        position: initial;
+        width: 100%;
+        transform: translateX(0);
+
+        background: transparent;
+        height: auto;
+    }
+
+    .sidebarMenuInner li {
+
+        padding: 5px;
+        border-bottom: none;
+    }
+
+    .sidebarMenuInner {
+        display: flex;
+        border: none;
+        list-style-type: none;
+
+    }
+
+
+    .sidebarMenuInner li span {
+        display: none;
+    }
+
+    .sidebarMenuInner li a {
+        text-transform: none;
+        font-size: 15px;
+        font-weight: 400;
+        padding: 5px;
+
+    }
+
+    .openSidebarMenu {
+        display: none;
+    }
+
+
+    .sidebarIconToggle {
+        display: none;
+    }
+
+
+    .sticky {
+        position: fixed;
+        top: 0;
+        box-shadow: 0px 10px 15px #00000037;
+        background: linear-gradient(45deg, #c86dda 0%, #3224ae 100%);
+        width: 100%;
+        transition: all 0.5s ease;
+        animation: smoothScroll 1s forwards;
+    }
+
+    .sticky .search input {
+        display: block;
+    }
+
+
+    @keyframes smoothScroll {
+        0% {
+            transform: translateY(-142px);
+        }
+
+        100% {
+            transform: translateY(0px);
+        }
+    }
+
+
+    .carousel {
+        flex-direction: row;
+        width: 100%;
+        justify-content: center;
+        padding: 0 5%;
+    }
+
+    .carousel .about {
+        margin-top: 60px;
+        width: 30%;
+    }
+
+    .carousel .product {
+        width: 50%;
+    }
+
+    .carousel .product .product {
+        margin: 0;
+    }
+
+    .carousel .product .previous {
+        position: absolute;
+        left: 5%;
+        top: 50%;
+    }
+
+    .carousel .product .next {
+        position: absolute;
+        right: 5%;
+        top: 50%;
+    }
+
+    .services {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        padding: 0 5%;
+    }
+
+    .ServicesItems {
+        width: 100%;
+    }
+
+    .ServicesItems .description h2 {
+        font-size: 20px;
+    }
+
+
+    .Category {
+        padding: 40px 10% 50px 10%;
+    }
+
+    .Category .CategoryItem {
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+
+    .Category .CategoryItem .item img {
+        width: 60%;
+    }
+
+    .Category .CategoryItem .item p {
+        font-size: 12px;
+    }
+
+    .Category .CategoryItem .item h4 {
+        font-size: 15px;
+    }
+
+
+    .overview {
+        padding: 0 10% 80px 10%;
+        width: 100%;
+        margin: auto;
+
+    }
+
+    .overview .item-con {
+        width: 80%;
+        margin: auto;display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+    }
+
+    .overview .item {
+        margin: 0;
+    }
+
+    .overview .item-con .first.item {
+        width: 30%;
+        height: 500px;
+    }
+
+    .overview .item-con .three.object {
+        width: 65%;
+    }
+
+    .overview .item-con .three.object .first h2 {
+        font-size: 15px;
+    }
+
+    .overview .item-con .three.object .first {
+        display: flex;
+        justify-content: space-between;
+
+        flex-direction: row;
+
+    }
+
+    .overview .item-con .three.object .first .first.item {
+        width: 45%;
+        height: 200px;
+    }
+
+    .overview .item-con .three.object .first .second.item {
+        width: 45%;
+        height: 200px;
+    }
+
+    .overview .item-con .three.object .first .second.item img {
+        /* width: 50%; */
+    }
+
+    .overview .item-con .three.object .first .first.item img {
+        /* width: 30%; */
+    }
+
+    .overview .item-con .three .second1.item {
+        width: 100%;
+        margin-top: 50px;
+        height: 250px;
+    }
+
+    .overview .item-con .three .second1.item img {
+        width: 80%;
+    }
+
 }

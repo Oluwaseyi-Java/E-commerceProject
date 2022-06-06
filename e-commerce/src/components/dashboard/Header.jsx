@@ -1,11 +1,9 @@
 import React, { useState, useRef, useEffect } from 'react'
+import Brandname from '../body/Brandname';
+import Search from '../body/Search';
 import NavIcon from './NavIcon'
 
 const Header = () => {
-
-    const [searchInput, setSearchInput] = useState("Search")
-
-
 
     const [sticky, setSticky] = useState({ isSticky: false, offset: 0 });
     const headerRef = useRef(null);
@@ -31,32 +29,19 @@ const Header = () => {
         };
     }, []);
 
+    // <div className='navitems'>
+    //     Nav items
+    // </div>
+    // <div className='headerIcons'>
+
+    // </div>
     return (
         <div>
 
             <div className={`header ${sticky.isSticky ? ' sticky' : ''}`} ref={headerRef} id="sticky-header">
+                <Brandname />
 
-                <div className='brandName'>
-
-                    <h2>RELAP</h2>
-                </div>
-
-                <div className='navitems'>
-                    Nav items
-                </div>
-                <div className='headerIcons'>
-
-                </div>
-
-                <div className='search'>
-                    <input
-                        type="text"
-                        value={searchInput}
-                        name="searchInput"
-                        onChange={(e) => setSearchInput(e.target.value)}
-                    />
-                </div>
-
+                <Search />
 
                 <NavIcon />
             </div>
