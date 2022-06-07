@@ -324,9 +324,12 @@ input[class="openSidebarMenu"]:checked~.sidebarIconToggle>.diagonal.part-2 {
     padding-bottom: 30px;
 }
 
-.Category .CategoryItem .item img {
-    width: 70%;
+
+.Category .CategoryItem .item .img img {
+    width: 100px;
+    padding: 20px 0 10px 0;
 }
+
 
 .Category .CategoryItem .item p {
     color: #989898;

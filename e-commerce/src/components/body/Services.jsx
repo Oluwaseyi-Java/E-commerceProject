@@ -5,7 +5,7 @@ import { overViewData } from '../../DataApi'
 
 const Services = () => {
 
-  const Services = overViewData.map(data => {
+  const Services = overViewData.map((data) => {
     return (
       <ServicesItems
         key={data.id}

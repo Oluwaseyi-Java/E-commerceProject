@@ -1,30 +1,22 @@
 import React from 'react'
-import VirtualImg from "../../Images/Ecommerce-stock-image/Virtual Reality.png"
+// import VirtualImg from "Virtual Reality.png"
 
 
-const MoreCard = () => {
+const MoreCard = ({ imgUrl, description, date }) => {
     return (
 
-        <div className="MoreCard">
-        
-            <div className='Card'>
-                <img alt='' src={VirtualImg } />
-                <h3>Vel illum qui dolorem eum fugiat</h3>
-                <p>June 01/2019</p>
-            </div>
-            <div className='Card'>
-                <img alt='' src={VirtualImg } />
-                <h3>Vel illum qui dolorem eum fugiat</h3>
-                <p>June 01/2019</p>
-            </div>
-            <div className='Card'>
-                <img alt='' src={VirtualImg } />
-                <h3>Vel illum qui dolorem eum fugiat</h3>
-                <p>June 01/2019</p>
-            </div>
-        
+
+        <div className='Card'>
+            <img
+                alt='pic'
+                src={require('../../Images/Ecommerce-stock-image/' + imgUrl + '.png')} />
+            <h3>{description}</h3>
+            <p>{date}</p>
         </div>
-  )
+
+
+
+    )
 }
 
 export default MoreCard

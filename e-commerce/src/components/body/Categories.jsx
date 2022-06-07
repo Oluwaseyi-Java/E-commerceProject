@@ -1,7 +1,19 @@
 import React from 'react'
-// import img from "../../Images/Ecommerce-stock-image/kisspng-laptop-ideapad-lenovo-solid-state-drive-computer-platinum-coins-5add19910d75f1.1518534915244394410552.png"
-import CategoryItem from './CategoryItem'
+import { categoryData } from '../../DataApi'
+import CategoryItem from "./CategoryItem"
+
+
 const Categories = () => {
+
+
+
+    const Category = categoryData.map(data => {
+        return (
+
+            <CategoryItem key={data.id} imgUrl={ data.imgUrl}/>
+
+        )
+    })
     return (
         <div className='Category'>
 
@@ -13,14 +25,9 @@ const Categories = () => {
 
             <div className='CategoryItem'>
 
-                <CategoryItem/>
-                <CategoryItem/>               
+                {Category}
 
-                <CategoryItem/>
-                <CategoryItem/>
-               
-                
-                
+
 
             </div>
         </div>

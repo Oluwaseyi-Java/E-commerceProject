@@ -1,7 +1,7 @@
 import React from 'react'
 import bag from "../../Images/Ecommerce-stock-image/bag.png"
 
-const ServicesItems = ({ ImgUrl, title, description }) => {
+const ServicesItems = ({ imgUrl, title, description }) => {
     return (
         <div className='ServicesItemsParentContainer'>
 

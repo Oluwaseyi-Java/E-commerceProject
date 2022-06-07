@@ -1,7 +1,19 @@
 import React from 'react'
 import Products from './Products'
-
+import { productTypeswData } from '../../DataApi'
 const ProductTypes = () => {
+
+    const Product = productTypeswData.map(data => {
+        return (
+
+            <Products
+                key={data.id}
+                imgUrl={data.imgUrl}
+                price={data.price}
+                name={data.description}
+            />
+        )
+    })
     return (
         <div className='productTypes'>
 
@@ -19,8 +31,11 @@ const ProductTypes = () => {
                     </ul>
                 </div>
             </div>
-           <Products/>
 
+            <div className='ProductContainer'>
+
+            {Product}
+            </div>
         </div>
     )
 }
