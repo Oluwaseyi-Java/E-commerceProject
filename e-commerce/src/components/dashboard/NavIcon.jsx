@@ -1,12 +1,23 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { ShopData } from "../../UIDatas"
 
 
+const allCategories = [ ...new Set(ShopData.products.map((product) => product.category))]
+console.log(allCategories)
+const NavIcon = ({ Open, check }) => {
 
-const NavIcon = () => {
+    const [categories, setCategories] = useState(allCategories);
+
+
     return (
         <div className='Navigation'>
-            <input type="checkbox" className="openSidebarMenu" id="openSidebarMenu" />
-            <label htmlFor="openSidebarMenu" className="sidebarIconToggle">
+            <input type="checkbox"
+                onClick={() => Open()}
+                className="openSidebarMenu"
+                onChange={(e) => Open(e.target.checked)}
+                id="openSidebarMenu" />
+            <label htmlFor="openSidebarMenu"
+                className={`sidebarIconToggle ${check && "checkProperty"}`} >
                 <div className="spinner diagonal part-1"></div>
                 <div className="spinner horizontal part-3"></div>
                 <div className="spinner diagonal part-2"></div>
@@ -16,16 +27,15 @@ const NavIcon = () => {
             <div id="sidebarMenu">
                 <ul className="sidebarMenuInner">
                     <li> <span>Shoppy Stores</span></li>
-                    <li><a href="/Furniture" >Furniture</a></li>
-                    <li><a href="/Footwears">Footwears</a></li>
-                    <li><a href="/Accessories" >Accessories</a></li>
-                    <li><a href="/Clothings" >Clothings</a></li>
-                    <li><a href="/Home Appliances" >Appliances</a></li>
+                    {categories.map((category, index) => {
+                        return <li key={index} ><a href={`/${category}`}>{category}</a></li>
 
+                    })}
                     <li><a href="/myaccount" >Account</a></li>
 
                     <li><a href="/cart" >Cart</a></li>
                 </ul>
+
             </div>
         </div>
     )

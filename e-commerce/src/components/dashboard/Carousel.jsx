@@ -11,7 +11,11 @@ const Carousel = () => {
       <div className='about'>
         <p>MINIM VENIAM</p>
         <h1>Ut labore et dolore</h1>
-        <button>Buy now</button>
+        <button
+          onClick={() => {
+            window.location.assign("/all")
+          }}
+        >Buy now</button>
       </div>
 
       <div className='product'>

@@ -1,7 +1,16 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import Products from './Products'
+
+import { ShopData } from "../../UIDatas"
 import { productTypeswData } from '../../DataApi'
+
+const allCategories = [...new Set(ShopData.products.map((product) => product.category))]
+console.log(allCategories)
+
 const ProductTypes = () => {
+
+    const [categories, setCategories] = useState(allCategories);
+
 
     const Product = productTypeswData.map(data => {
         return (
@@ -23,18 +32,17 @@ const ProductTypes = () => {
                 </div>
                 <div className='ProductCategory'>
                     <ul>
-                        <li><a href='/'>Phones</a></li>
-                        <li><a href='/'>Electronics</a></li>
-                        <li><a href='/'>Appliances</a></li>
-                        <li><a href='/'>Clothes</a></li>
-                        <li><a href='/'>Kids</a></li>
+                        {categories.map((category, index) => {
+                            return <li key={index} ><a href={`/${category}`}>{category}</a></li>
+
+                        })}
                     </ul>
                 </div>
             </div>
 
             <div className='ProductContainer'>
 
-            {Product}
+                {Product}
             </div>
         </div>
     )

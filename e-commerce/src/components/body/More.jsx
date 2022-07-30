@@ -2,8 +2,13 @@ import React from 'react'
 import MoreCard from './MoreCard'
 import { moreCardData } from '../../DataApi'
 
+
+// { Fade, Handler }
 const More = () => {
 
+
+  // Fade = { Fade }
+  // Handler = { Handler }
 
   const moreCard = moreCardData.map(data => {
     return (

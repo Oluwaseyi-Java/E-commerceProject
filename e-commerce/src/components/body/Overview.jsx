@@ -17,7 +17,11 @@ const Overview = () => {
                 <div className='first item'>
                     <h2>Sed ut perspiciatis</h2>
                     <p>Unde onmis iste natus error</p>
-                    <button>Shop now</button>
+                    <button
+                        onClick={() => {
+                            window.location.assign("/all")
+                        }}
+                    >Shop now</button>
                     <img className='img firstImg' src={firstItemimg} alt='' />
                 </div>
                 <div className='three object'>
@@ -37,7 +41,11 @@ const Overview = () => {
                     <div className='second1 item'>
                         <h2>Quae ab illo inventore</h2>
                         <p>Architects beaae vitae dicta sunt</p>
-                        <button>Shop now</button>
+                        <button
+                            onClick={() => {
+                                window.location.assign("/all")
+                            }}
+                        >Shop now</button>
                         <img className='img' src={desktop} alt='pic' />
                     </div>
                 </div>

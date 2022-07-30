@@ -8,11 +8,11 @@ const CategoryItem = ({imgUrl}) => {
               <div className='img'>
               <img src={require('../../Images/Ecommerce-stock-image/'+imgUrl+'.png')} alt='pic' />
               </div>
-              <p><a href='/'>SmartPhone</a></p>
-              <p><a href='/'>Components</a></p>
-              <p><a href='/'>Specifications</a></p>
-              <p><a href='/'>Similar</a></p>
-              <h4><a href='/'>See all</a></h4>
+              <p><a href='/accessories'>SmartPhone</a></p>
+              <p><a href='/accessories'>Components</a></p>
+              <p><a href='/accessories'>Specifications</a></p>
+              <p><a href='/accessories'>Similar</a></p>
+              <h4><a href='/all'>See all</a></h4>
           </div>
 
       </div>
