@@ -40,7 +40,7 @@ button {
 
 .Open .checkProperty {
     position: fixed;
-    z-index: 99;
+    z-index: 50;
 }
 
 .sticky .search input {
@@ -533,10 +533,8 @@ input[class="openSidebarMenu"]:checked~.sidebarIconToggle>.diagonal.part-2 {
 .productTypes .ProductHeaderContainer .ProductCategory ul {
     display: flex;
     overflow: scroll;
-
     padding: 15px;
     margin-left: 0;
-
 }
 
 .productTypes .ProductHeaderContainer .ProductCategory ul::-webkit-scrollbar {
@@ -552,6 +550,8 @@ input[class="openSidebarMenu"]:checked~.sidebarIconToggle>.diagonal.part-2 {
     padding: 10px;
     color: #989898;
     font-size: 16px;
+    text-transform: capitalize;
+    
 }
 
 .ProductContainer {
@@ -918,7 +918,12 @@ footer {
     margin: 30px 0 0 0;
     padding: 10px 0 40px 0;
 }
-
+.CategorySection{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px 0 50px 0;
+}
 @media (min-width:510px) {
 
     .services {
@@ -1092,7 +1097,7 @@ footer {
     }
 
     .sidebarMenuInner li a {
-        text-transform: none;
+        text-transform: capitalize;
         font-size: 15px;
         font-weight: 400;
         padding: 5px;

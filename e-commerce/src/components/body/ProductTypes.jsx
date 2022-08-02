@@ -5,7 +5,7 @@ import { ShopData } from "../../UIDatas"
 import { productTypeswData } from '../../DataApi'
 
 const allCategories = [...new Set(ShopData.products.map((product) => product.category))]
-console.log(allCategories)
+
 
 const ProductTypes = () => {
 
@@ -33,7 +33,7 @@ const ProductTypes = () => {
                 <div className='ProductCategory'>
                     <ul>
                         {categories.map((category, index) => {
-                            return <li key={index} ><a href={`/${category}`}>{category}</a></li>
+                            return <li key={index} ><a href={`/category/${category}`}>{category}</a></li>
 
                         })}
                     </ul>

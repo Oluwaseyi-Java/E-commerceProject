@@ -3,7 +3,7 @@ import { ShopData } from "../../UIDatas"
 
 
 const allCategories = [ ...new Set(ShopData.products.map((product) => product.category))]
-console.log(allCategories)
+
 const NavIcon = ({ Open, check }) => {
 
     const [categories, setCategories] = useState(allCategories);
@@ -28,7 +28,7 @@ const NavIcon = ({ Open, check }) => {
                 <ul className="sidebarMenuInner">
                     <li> <span>Shoppy Stores</span></li>
                     {categories.map((category, index) => {
-                        return <li key={index} ><a href={`/${category}`}>{category}</a></li>
+                        return <li key={index} ><a href={`/category/${category}`}>{category}</a></li>
 
                     })}
                     <li><a href="/myaccount" >Account</a></li>

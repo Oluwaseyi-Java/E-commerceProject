@@ -568,7 +568,7 @@ export const ShopData = {
         },
         {
             "_id": "5fbb226048bd280d447b0756",
-            "name": "SAMSUNG SM-T290NZKAXAR", "price": 99999.99,
+            "name": "Samsung Sm-T2jverkmcdR", "price": 99999.99,
             "category": "accessories",
             "description": "Galaxy Tab A 8.0\" 32 GB Wifi Android 9.0 Pie Tablet Black 2019",
             "image_url": "https://m.media-amazon.com/images/I/41UPtXbP4LL._AC_UY218_.jpg",

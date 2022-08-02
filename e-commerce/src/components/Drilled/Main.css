@@ -1,0 +1,145 @@
+.Card_Con {
+    display: flex;
+    overflow: scroll;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    padding-left: 5%;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.Card_Con::-webkit-scrollbar {
+    display: none;
+}
+
+.main {
+    padding: 50px 0;
+    background-color: rgb(246, 246, 246);
+}
+
+.ComponentContainer {
+    height: 300px;
+    box-shadow: none;
+    text-align: left;
+    border-radius: 10px;
+}
+
+.ComponentContainer h2 {
+    text-transform: capitalize;
+    font-size: 1.0em;
+    padding: 0;
+}
+
+.ComponentContainer button {
+    border: none;
+    width: 100%;
+    padding: 10px 0;
+    background: #3224ae;
+    color: white;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.HorizontalScroll h1 {
+    margin-left: 5%;
+    font-size: 1.5em;
+    text-transform: capitalize;
+}
+
+.containerImg {
+    height: 200px;
+}
+
+.containerImg img {
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+}
+
+article.Modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 40;
+    background: rgba(0, 0, 0, 0.663);
+}
+
+.Modal .Modal-Card {
+    width: 80%;
+    height: 50%;
+    background: white;
+    position: absolute;
+    top: 25%;
+    left: 10%;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.Modal .Modal-Card .head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Modal .Modal-Card .head p {
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.Modal .Modal-Card h2 {
+    font-size: 1.8em;
+
+}
+
+.Modal .Modal-Card .Modal-Section {
+    border-top: 1px solid gray;
+
+}
+
+.Modal .Modal-Card .Modal-Section h3 {
+    font-size: 1.4em;
+    padding-top: 10px;
+}
+
+.Modal .Modal-Card .Modal-Section h4 {
+    font-size: 0.9em;
+    color: green;
+}
+
+.Modal .Modal-Card .Modal-Section p {
+    font-size: 0.85em;
+    padding: 5px 0;
+}
+
+.Modal .Modal-Card .Modal-Section .CartButton {
+    width: 100%;
+    margin-top: 10px;
+    border: none;
+    padding: 10px 0;
+    background: rgb(198, 197, 197);
+}
+
+.Modal .Modal-Card .Modal-Section .Item-Numbers {
+    display: flex;
+
+}
+
+.Modal .Modal-Card .Modal-Section .Item-Numbers button {
+    border: none;
+    color: white;
+    padding: 5px 20px;
+}
+
+.Modal .Modal-Card .Modal-Section .Item-Numbers .decr {
+    background: rgb(211, 0, 0);
+}
+
+.Modal .Modal-Card .Modal-Section .Item-Numbers .incr {
+    background-color: green;
+}
+
+.Modal .Modal-Card .Modal-Section .Item-Numbers p {
+    margin: 0 10px;
+}

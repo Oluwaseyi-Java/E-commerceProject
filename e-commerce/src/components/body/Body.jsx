@@ -1,58 +1,33 @@
-import React from 'react'
-import Categories from './Categories'
-import Discount from './Discount'
-import More from './More'
-import Newsletter from './Newsletter'
-import Overview from './Overview'
-import ProductTypes from './ProductTypes'
-import Services from './Services'
+import React, { useState } from 'react'
+import { Routes, Route } from 'react-router-dom'
+import Main from '../Drilled/Main'
+import { ShopData } from '../../UIDatas'
+import Home from './Home'
+import Category from '../Drilled/Category'
 
 
-// { Fade, Handler }
-// Fade = { Fade } Handler = { Handler }
 const Body = () => {
 
+  const [shopItems, setShopItems] = useState(ShopData.products);
 
   /**
    * 
    * 
   const [categories, setCategories] = useState(allCategories);
-  const [shopItems, setShopItems] = useState(ShopData.products);
 
   useEffect(() => {
     setCategories(allCategories);
     setShopItems(ShopData.products)
 },[])
 
-
    */
   return (
     <div>
-
-
-      <Services />
-      <Categories />
-      {/** 
-        <Routes>
-        <Route  path='/all' element={<Main items={shopItems} />} />
-        <Route path={`/:category`} element={<Category />} />
-        <Route path='/cart' element={<Cart />} />
+      <Routes>
+        <Route path='/all' element={<Main items={shopItems} />} />
+        <Route path='/' element={<Home />} />
+        <Route path={`/category/:category`} element={<Category />} />
       </Routes>
-
-       * **/}
-      {/** 
-      /
-       * **/}
-      <Overview />
-      <ProductTypes />
-      <Discount />
-      <More />
-      {/** 
- /all
-
-        * **/}
-      <Newsletter />
-
     </div>
   )
 }
