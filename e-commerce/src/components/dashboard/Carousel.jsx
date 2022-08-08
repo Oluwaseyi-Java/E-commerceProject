@@ -9,13 +9,13 @@ const Carousel = () => {
   return (
     <div className='carousel'>
       <div className='about'>
-        <p>MINIM VENIAM</p>
-        <h1>Ut labore et dolore</h1>
+      <h1>BUY 50 ITEMS AND GET 1 FREE</h1>
+      <p>In our mid-year discount, we make shopping easy for our buyers. Buy 50 items and we will give you a phone. Lets go Shopping.</p>
         <button
           onClick={() => {
             window.location.assign("/all")
           }}
-        >Buy now</button>
+        >Shop now</button>
       </div>
 
       <div className='product'>

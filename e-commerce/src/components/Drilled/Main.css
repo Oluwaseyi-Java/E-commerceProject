@@ -117,8 +117,9 @@ article.Modal {
     width: 100%;
     margin-top: 10px;
     border: none;
+    color: white;
     padding: 10px 0;
-    background: rgb(198, 197, 197);
+    background: #9000ad;
 }
 
 .Modal .Modal-Card .Modal-Section .Item-Numbers {
@@ -142,4 +143,21 @@ article.Modal {
 
 .Modal .Modal-Card .Modal-Section .Item-Numbers p {
     margin: 0 10px;
+}
+
+.HorizontalScroll .head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.HorizontalScroll .head .arrow {
+    font-size: 1.5em;
+    margin-right: 20px;
+    cursor: pointer;
+    color: rgb(78, 78, 78);
+}
+
+.HorizontalScroll .head .arrow:hover {
+    font-size: 1.8em;
 }

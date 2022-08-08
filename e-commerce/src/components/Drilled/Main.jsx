@@ -1,37 +1,21 @@
-import React, { useState } from 'react'
+import React, { useEffect } from 'react'
+import { useParams } from 'react-router-dom'
+import { useGlobalContext } from '../../contextApi/Context.api'
 import HorizontalScroll from './HorizontalScroll'
-import { ShopData } from '../../UIDatas'
 import "./Main.css"
 import Modal from './Modal'
 
-const allCategories = [...new Set(ShopData.products.map((product) => product.category))]
+const Main = () => {
+    const { categories, isModal, modalContent, checkModal, checkIfIsOpen } = useGlobalContext();
 
-const Main = ({ items }) => {
-    const [categories] = useState(allCategories);
-    const [isModal, setIsModal] = useState(false)
-
-    const [modalContent, setModalContent] = useState({
-        name: "",
-        price: "",
-        description: "",
-        imgUrl: ""
-    })
-
-    const checkModal = (name, price, description, imgUrl) => {
-
-        setModalContent({
-            ...modalContent,
-            name: name,
-            price: price,
-            description: description,
-            imgUrl: imgUrl
-        })
-        setIsModal(true)
-    }
-
+    const { all } = useParams();
+    useEffect(() => {
+        checkIfIsOpen(all)
+    }, [all, checkIfIsOpen])
     return (
         <div>
-            {isModal && <Modal content={modalContent} closeModal={setIsModal} />}
+
+            {isModal && <Modal content={modalContent} />}
             <div className='main'>
                 <div className='main-items'>
                     {categories.map((item, index) => {

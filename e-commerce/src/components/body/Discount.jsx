@@ -1,6 +1,10 @@
 import React from 'react'
 import Headset from "../../Images/Ecommerce-stock-image/headphone-png-854118.png"
 
+import { ShopData } from "../../UIDatas"
+
+
+const allCategories = [...new Set(ShopData.products.map((product) => product.category))]
 
 const Discount = () => {
   return (
@@ -15,11 +19,9 @@ const Discount = () => {
         <div className='ProductCategory'>
           <div className='Container'>
             <h2>Voluptate</h2>
-            <p>Phones</p>
-            <p>Electronics</p>
-            <p>Appliances</p>
-            <p>Clothes</p>
-            <p>Kids</p>
+            {allCategories.map((item, index) => {
+              return <p key={index}>{item}</p>
+            })}
           </div>
         </div>
 

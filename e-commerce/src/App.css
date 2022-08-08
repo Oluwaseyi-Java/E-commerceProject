@@ -43,7 +43,7 @@ button {
     z-index: 50;
 }
 
-.sticky .search input {
+.sticky .search form {
     display: none;
 }
 
@@ -207,15 +207,28 @@ input[class="openSidebarMenu"]:checked~.sidebarIconToggle>.diagonal.part-2 {
     text-align: center;
 }
 
-.search input {
+.search form {
     width: 90%;
-    padding: 15px 15px 15px 20px;
+    margin: auto;
+}
+
+.search form input {
     font-size: 15px;
-    color: rgb(140, 138, 138);
+    width: 80%;
     outline: none;
     border: none;
+    padding: 10px 20px;
+    color: rgb(140, 138, 138);
     margin: 20px 0 10px 0;
+}
 
+.search form button {
+    width: 20%;
+    background: white;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    padding: 10px 0;
 }
 
 .carousel {
@@ -227,26 +240,29 @@ input[class="openSidebarMenu"]:checked~.sidebarIconToggle>.diagonal.part-2 {
 }
 
 .carousel p {
-    font-size: 20px;
+    font-size: 1.0em;
     color: white;
     margin: 20px 0;
 }
 
 .carousel h1 {
-    font-size: 50px;
+    font-size: 2.5em;
     color: white;
 }
 
 .carousel button {
     padding: 10px 30px 10px 30px;
     font-size: 15px;
-    border-radius: 50px;
+    border-radius: 10px;
     border: 1px solid #fec304;
     margin: 20px 0;
     outline: none;
     color: white;
     background-color: transparent;
+}
 
+.carousel button:hover {
+    background: #fec40471;
 }
 
 
@@ -516,14 +532,12 @@ input[class="openSidebarMenu"]:checked~.sidebarIconToggle>.diagonal.part-2 {
 
 .productTypes {
     background-color: white;
-
     padding: 50px 10px 20px 20px;
     margin-bottom: 20px;
 }
 
 .productTypes .ProductHeaderContainer .productContainerTitle {
     width: 100%;
-
 }
 
 .productTypes .ProductHeaderContainer .productContainerTitle h1 {
@@ -551,13 +565,14 @@ input[class="openSidebarMenu"]:checked~.sidebarIconToggle>.diagonal.part-2 {
     color: #989898;
     font-size: 16px;
     text-transform: capitalize;
-    
+
 }
 
 .ProductContainer {
     display: flex;
     width: auto;
-    overflow: scroll;
+    overflow-y: hidden;
+    overflow-x: scroll;
     gap: 20px;
     padding: 20px 0 50px 10px;
 }
@@ -651,6 +666,7 @@ input[class="openSidebarMenu"]:checked~.sidebarIconToggle>.diagonal.part-2 {
 .DiscountBody .ProductCategory .Container p {
     padding: 10px;
     font-size: 18px;
+    text-transform: capitalize;
     color: #989898;
 }
 
@@ -684,9 +700,6 @@ input[class="openSidebarMenu"]:checked~.sidebarIconToggle>.diagonal.part-2 {
     color: #9000ad;
 }
 
-/* .DiscountBody .ProductDescription .price span {}
- */
-
 .DiscountBody .ProductDescription .description {
     font-size: 15px;
     color: #989898;
@@ -706,7 +719,6 @@ input[class="openSidebarMenu"]:checked~.sidebarIconToggle>.diagonal.part-2 {
 .DiscountBody .ProductDescription input {
     width: 100%;
     height: 40px;
-
 }
 
 .DiscountBody .ProductDescription button {
@@ -744,17 +756,21 @@ input[class="openSidebarMenu"]:checked~.sidebarIconToggle>.diagonal.part-2 {
     width: 90%;
     height: auto;
     margin: 50px auto;
-
     box-shadow: 2px 15px 30px #d1cfcfd3;
 }
 
-.MoreCard .Card img {
+.MoreCard .Card .img {
     width: 100%;
+    height: 200px;
+}
 
+.MoreCard .Card img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
 }
 
 .MoreCard .Card h3 {
-
     padding: 10px 30px 10px 30px;
     font-size: 25px;
 }
@@ -770,7 +786,6 @@ input[class="openSidebarMenu"]:checked~.sidebarIconToggle>.diagonal.part-2 {
     background-color: #3224ae;
     position: relative;
     margin: 10px 0 0 0;
-
 }
 
 .Newsletter .about {
@@ -918,12 +933,119 @@ footer {
     margin: 30px 0 0 0;
     padding: 10px 0 40px 0;
 }
-.CategorySection{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 20px 0 50px 0;
+
+.CategorySection {
+    background: #f7f7f7;
 }
+
+.CategorySection h2 {
+    text-transform: capitalize;
+    padding: 20px 0 0 20px;
+}
+
+.CategorySectionItems {
+    display: flex;
+    align-items: center;
+    padding: 20px 0 50px 0;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.CategorySection .ComponentContainer {
+    width: 200px;
+    margin: 10px 0;
+}
+
+.CategorySection .ComponentContainer h2 {
+    font-size: 0.8em;
+}
+
+.CategorySection .ComponentContainer p {
+    font-size: 0.6em;
+}
+
+.Cart {
+    background: #f0f0f08e;
+}
+
+.Cart .Head {
+    background: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.Cart .Body {
+    width: 80%;
+    padding: 20px 0;
+    margin: auto;
+}
+
+.Cart .Body .description {
+    text-align: center;
+}
+
+.Cart .Body .description img {
+    width: 40%;
+}
+
+.Cart .Body .description h2 {
+    padding: 20px 0;
+}
+
+.Cart .Body .description p {
+    font-size: 0.9em;
+}
+
+.Cart .Body .ItemHead {
+    padding: 15px 10px 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.Cart .Body .ItemHead .sub {
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.Cart .Body .Card {
+    background: white;
+    font-weight: 600;
+    margin: 10px 0;
+    padding: 15px 20px;
+    width: 100%;
+    box-shadow: 2px 4px 6px #51515117;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8em;
+}
+
+.Cart .Body .Card .sub2 {
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.Cart .Body .Card .sub2 .price {
+    color: #3224ae;
+}
+
+.Cart .Body .summary {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+    align-items: center;
+}
+
+.Cart .Body .summary button {
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    background: #9000ad;
+    color: white;
+}
+
 @media (min-width:510px) {
 
     .services {
@@ -1024,7 +1146,7 @@ footer {
 
 @media (min-width:750px) {
 
-    .search input {
+    .search form {
         display: none;
     }
 
@@ -1038,19 +1160,15 @@ footer {
         flex-wrap: wrap;
     }
 
-
-
-
     .header {
         padding: 20px 5%;
         margin: 0;
         width: 100%;
         justify-content: space-between;
+        align-items: center;
         display: flex;
         border-bottom: 1pt solid rgba(255, 255, 255, 0.208);
     }
-
-
 
     .header .brandName h2 {
         padding: 0 15px 0 0;
@@ -1061,13 +1179,11 @@ footer {
         flex-grow: 2;
     }
 
-    .header .search input {
+    .header .search form {
         width: 100%;
         margin: auto;
         padding: 10px;
     }
-
-
 
     #sidebarMenu {
         position: initial;
@@ -1124,8 +1240,12 @@ footer {
         animation: smoothScroll 1s forwards;
     }
 
-    .sticky .search input {
+    .sticky .search form {
         display: block;
+    }
+
+    .sticky .search form input {
+        margin: 0;
     }
 
 
@@ -1527,14 +1647,17 @@ footer {
 @media (min-width:1020px) {
 
 
-    .search input {
+    .search form {
         display: block;
+    }
+
+    .search form input {
+        margin: 0;
     }
 
     .sticky .search {
         display: block;
     }
-
 
     .ServicesItems .img img {
         width: 80px;

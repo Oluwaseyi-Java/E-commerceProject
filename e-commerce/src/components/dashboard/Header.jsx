@@ -36,19 +36,12 @@ const Header = () => {
         };
     }, []);
 
-    // <div className='navitems'>
-    //     Nav items
-    // </div>
-    // <div className='headerIcons'>
-
-    // </div>
     const checkNav = (value) => {
         setIsOpen(value)
         console.log(isOpen)
     }
     return (
         <div>
-
             <div className={`header ${sticky.isSticky ? ' sticky' : ''} ${isOpen && "Open"}`} ref={headerRef} id="sticky-header">
                 <Brandname />
 
