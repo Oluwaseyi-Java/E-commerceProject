@@ -25,7 +25,7 @@ const Category = () => {
                             key={index}
                             name={item.name}
                             price={item.price}
-                            imgUrl={item.imgUrl}
+                            imgUrl={item.image_url}
                             modal={checkModal}
                             description={item.description} />
                     })
