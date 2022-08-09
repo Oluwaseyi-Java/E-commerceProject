@@ -1071,6 +1071,12 @@ footer {
     .resources {
         padding: 0 10%;
     }
+    .CategoryAbout{
+        width: 100%;
+        margin: 0;
+        text-align: center;
+        padding: 40px 0;
+    }
 }
 
 @media (min-width:600px) {

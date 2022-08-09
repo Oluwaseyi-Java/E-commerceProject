@@ -9,7 +9,7 @@ const Carousel = () => {
 
   return (
     <div className='carousel'>
-      <div className='about'>
+      <div className={`${!isCategory ? "CategoryAbout" :"about"}`}>
         <h1>BUY 50 ITEMS AND GET 1 FREE</h1>
         <p>In our mid-year discount, we make shopping easy for our buyers. Buy 50 items and we will give you a phone. Lets go Shopping.</p>
         <button
