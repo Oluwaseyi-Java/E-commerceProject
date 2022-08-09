@@ -4,14 +4,15 @@ import { useGlobalContext } from '../../contextApi/Context.api'
 import CatItemCard from './CatItemCard'
 import Modal from "./Modal"
 const Category = () => {
-    const { shopItems, isModal, modalContent, checkModal } = useGlobalContext();
+    const { shopItems, isModal, modalContent, checkModal, checkIfIsCategory } = useGlobalContext();
     const [shopItem, setShopItem] = useState([]);
 
     const { category } = useParams();
     useEffect(() => {
+        checkIfIsCategory(category)
         const newItems = shopItems.filter((item) => item.category === category)
         setShopItem(newItems)
-    }, [category, shopItems]);
+    }, [category, shopItems, checkIfIsCategory]);
 
 
     return (

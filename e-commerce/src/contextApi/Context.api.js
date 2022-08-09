@@ -13,15 +13,14 @@ const AppProvider = ({ children }) => {
     const [shopItems, setShopItems] = useState(ShopData.products);
     const [categories] = useState(allCategories);
     const [isModal, setIsModal] = useState(false)
-    const [isOpen,setIsOpen]=useState(true)
+    const [isOpen, setIsOpen] = useState(true)
+    const [isCategory, setIsCategory] = useState(true)
     const [modalContent, setModalContent] = useState({
         name: "",
         price: "",
         description: "",
         imgUrl: ""
     })
-
-
     useEffect(() => {
         setShopItems(ShopData.products)
     }, [])
@@ -29,6 +28,11 @@ const AppProvider = ({ children }) => {
     const checkIfIsOpen = (value) => {
         if ((value) === "cart" || "all") {
             setIsOpen(false)
+        }
+    }
+    const checkIfIsCategory = (value) => {
+        if ((value) === "furnitures" || "clothings" || "home appliances" || "footwears" || "accessories") {
+            setIsCategory(false)
         }
     }
     const checkModal = (name, price, description, imgUrl) => {
@@ -46,7 +50,8 @@ const AppProvider = ({ children }) => {
     }
 
     return <AppContext.Provider value={{
-        shopItems, categories, isModal, modalContent, closeModal, checkModal,checkIfIsOpen,isOpen
+        shopItems, categories, isModal, modalContent, closeModal, checkModal,
+        checkIfIsOpen, isOpen, isCategory, checkIfIsCategory
     }}>
         {children}
     </AppContext.Provider>
