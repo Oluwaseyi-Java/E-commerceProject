@@ -68,7 +68,7 @@ article.Modal {
 
 .Modal .Modal-Card {
     width: 80%;
-    height: 50%;
+    min-height: 50%;
     background: white;
     position: absolute;
     top: 25%;
@@ -124,7 +124,6 @@ article.Modal {
 
 .Modal .Modal-Card .Modal-Section .Item-Numbers {
     display: flex;
-
 }
 
 .Modal .Modal-Card .Modal-Section .Item-Numbers button {
@@ -160,4 +159,22 @@ article.Modal {
 
 .HorizontalScroll .head .arrow:hover {
     font-size: 1.8em;
+}
+@media (min-width:600px) {
+    .Modal .Modal-Card {
+        width: 60%;
+        left: 20%;
+    }
+}
+@media (min-width:700px) {
+.Modal .Modal-Card {
+        width: 50%;
+        left: 25%;
+    }
+}
+@media (min-width:900px) {
+.Modal .Modal-Card {
+        width: 40%;
+        left: 30%;
+    }
 }

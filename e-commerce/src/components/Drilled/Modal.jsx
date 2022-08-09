@@ -17,7 +17,7 @@ const Modal = ({ content }) => {
     const { closeModal } = useGlobalContext();
     const [count, setCount] = useState(1)
     const [list, setList] = useState(listItem);
-
+    const [modal, setModal] = useState(false)
     const checkNumber = (number) => {
         if (number < 1) {
             return 1
@@ -39,6 +39,11 @@ const Modal = ({ content }) => {
             price: content.price,
             quantity: count
         }])
+
+        setModal(true)
+        setTimeout(() => {
+            setModal(false)
+        }, 1000)
     }
     useEffect(() => {
         localStorage.setItem("list", JSON.stringify(list))
@@ -62,7 +67,7 @@ const Modal = ({ content }) => {
                             <p>{count}</p>
                             <button className='incr' onClick={increment}>+</button>
                         </div>
-                        <button className='CartButton' onClick={addToCart}>Add to Cart</button>
+                        <button className='CartButton' onClick={addToCart}>{`${modal ? "Added successfully" : "Add to Cart"}`}</button>
                     </div>
                 </div>
             </Zoom>
