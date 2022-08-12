@@ -56,7 +56,7 @@
     height: 100%;
 }
 
-article.Modal {
+.Modal {
     position: fixed;
     top: 0;
     left: 0;
@@ -90,12 +90,11 @@ article.Modal {
 
 .Modal .Modal-Card h2 {
     font-size: 1.8em;
-
+    padding: 0;
 }
 
 .Modal .Modal-Card .Modal-Section {
     border-top: 1px solid gray;
-
 }
 
 .Modal .Modal-Card .Modal-Section h3 {
@@ -160,21 +159,43 @@ article.Modal {
 .HorizontalScroll .head .arrow:hover {
     font-size: 1.8em;
 }
+.NoItem {
+    text-align: center;
+    margin-top: 50px;
+    padding: 20px 0 50px;
+}
+
+.NoItem p {
+    font-size: larger;
+    font-weight: 500;
+}
+
+.NoItem h4 {
+    font-size: larger;
+    margin-bottom: 40px;
+}
+
 @media (min-width:600px) {
     .Modal .Modal-Card {
         width: 60%;
         left: 20%;
     }
 }
+
 @media (min-width:700px) {
-.Modal .Modal-Card {
+    .Modal .Modal-Card {
         width: 50%;
         left: 25%;
     }
 }
+
 @media (min-width:900px) {
-.Modal .Modal-Card {
+    .Modal .Modal-Card {
         width: 40%;
         left: 30%;
+    }
+    .NoItem .search{
+        width: 50%;
+        margin: auto;
     }
 }

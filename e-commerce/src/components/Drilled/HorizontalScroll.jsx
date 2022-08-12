@@ -10,14 +10,15 @@ const HorizontalScroll = ({ category, modal }) => {
   useEffect(() => {
     setItems(shopItems.filter((item) => item.category === category))
   }, [shopItems, category])
-  
+
   return (
     <div className='HorizontalScroll'>
-      <div className='head'>
+      <div className='head'
+        onClick={() => window.location.assign(`/category/${category}`)}
+      >
         <h1>{category}</h1>
         <FaLongArrowAltRight
           className='arrow'
-          onClick={() => window.location.assign(`/category/${category}`)}
         />
       </div>
       <div className='Card_Con'>

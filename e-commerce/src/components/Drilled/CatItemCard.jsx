@@ -12,7 +12,7 @@ const CatItemCard = ({ imgUrl, price, name, modal, description }) => {
                 <p>{`$${price}`}</p>
                 <button onClick={() =>
                     modal(name, price, description, imgUrl)
-                }>Add to Cart</button>
+                }>Order</button>
             </Zoom>
         </div>
     )

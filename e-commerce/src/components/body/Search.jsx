@@ -1,31 +1,38 @@
-import { useEffect, useState } from "react"
-import React from 'react'
-import { ShopData } from "../../UIDatas"
-
-
+import React, { useState } from 'react'
+import { FaSearch } from 'react-icons/fa'
+import { useGlobalContext } from "../../contextApi/Context.api"
 
 const Search = () => {
-    const [searchInput, setSearchInput] = useState("Search")
+    const { shopItems } = useGlobalContext();
+    const [searchInput, setSearchInput] = useState("")
 
-    const getTerms = () => {
-        ShopData.products.find((item)=>item.category===searchInput)
+    const HandleSubmit = (e) => {
+        e.preventDefault();
+        if (searchInput) {
+            localStorage.setItem("searchedData",
+                JSON.stringify(shopItems.filter((items) =>
+                    items.category === searchInput.trim().toLowerCase() ||
+                    items.category.toLowerCase().includes(searchInput.trim().toLowerCase()) ||
+                    items.name.toLowerCase().includes(searchInput.trim().toLowerCase()))))
+        }
+        window.location.assign(`/category/${"search"}`)
     }
-useEffect(()=>{getTerms()})
 
     return (
         <div className='search'>
-            <form>
-            <input
-            type="text"
-            value={searchInput}
-            name="searchInput"
-            onChange={(e) => setSearchInput(e.target.value)}
+            <form onSubmit={HandleSubmit}>
+                <input
+                    type="text"
+                    value={searchInput}
+                    name="searchInput"
+                    placeholder="Search"
+                    onChange={(e) => setSearchInput(e.target.value)}
                 />
-                <button>Search</button>
+                <button><FaSearch /> </button>
             </form>
         </div>
 
-  )
+    )
 }
 
 export default Search
